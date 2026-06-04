@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1000" viewBox="0 0 2400 1000" role="img" aria-label="Footer Texture (optional) placeholder">
+  <rect width="2400" height="1000" fill="#F4F1E8"/>
+  <rect x="15" y="15" width="2370" height="970" fill="none" stroke="#E8E3D5" stroke-width="6"/>
+  <rect x="30" y="30" width="2340" height="940" fill="none" stroke="#0F5E9A" stroke-opacity="0.55" stroke-width="5" stroke-dasharray="25 18"/>
+  <rect x="30" y="30" width="140" height="20" fill="#0F5E9A"/>
+  
+    <text x="1200" y="440" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="800" font-size="70" fill="#0B1320">Footer Texture (optional)</text>
+    <text x="1200" y="510" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="500" font-size="44" fill="#3A4658">Low-contrast blueprint / pipe flat-lay</text>
+    <text x="1200" y="580" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="700" font-size="40" fill="#0F5E9A">21:9 · 2400×1000px</text>
+    <text x="1200" y="936" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="600" font-size="34" fill="#3A4658" opacity="0.75">PLACEHOLDER · replace with blueprint-texture.webp</text>
+</svg>

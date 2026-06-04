@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="628" viewBox="0 0 1200 628" role="img" aria-label="Ad · Landscape placeholder">
+  <rect width="1200" height="628" fill="#F4F1E8"/>
+  <rect x="9.5" y="9.5" width="1181" height="609" fill="none" stroke="#E8E3D5" stroke-width="4"/>
+  <rect x="19" y="19" width="1162" height="590" fill="none" stroke="#E0822A" stroke-opacity="0.55" stroke-width="3" stroke-dasharray="15.700000000000001 11.304"/>
+  <rect x="19" y="19" width="88" height="13" fill="#E0822A"/>
+  
+    <text x="600" y="276.32" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="800" font-size="44" fill="#0B1320">Ad · Landscape</text>
+    <text x="600" y="320.28" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="500" font-size="28" fill="#3A4658">Google/Meta banner crop</text>
+    <text x="600" y="364.24" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="700" font-size="25" fill="#E0822A">1.91:1 · 1200×628px</text>
+    <text x="600" y="588" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="600" font-size="21" fill="#3A4658" opacity="0.75">PLACEHOLDER · replace with ad-landscape-1.91x1.webp</text>
+</svg>

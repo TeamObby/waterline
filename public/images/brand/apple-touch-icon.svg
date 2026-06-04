@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Apple Touch Icon placeholder">
+  <rect width="180" height="180" fill="#F4F1E8"/>
+  <rect x="4" y="4" width="172" height="172" fill="none" stroke="#E8E3D5" stroke-width="1"/>
+  <rect x="8" y="8" width="164" height="164" fill="none" stroke="#0F5E9A" stroke-opacity="0.55" stroke-width="1" stroke-dasharray="4.5 3.24"/>
+  <rect x="8" y="8" width="25" height="4" fill="#0F5E9A"/>
+  
+    <text x="90" y="88.4" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="800" font-size="16" fill="#0B1320">Apple Touch Icon</text>
+    <text x="90" y="101.2" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="600" font-size="7" fill="#3A4658">1:1 · 180×180</text>
+</svg>

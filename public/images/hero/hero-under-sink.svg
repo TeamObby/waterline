@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-label="Hero placeholder">
+  <rect width="1080" height="1350" fill="#F4F1E8"/>
+  <rect x="16" y="16" width="1048" height="1318" fill="none" stroke="#E8E3D5" stroke-width="6"/>
+  <rect x="32" y="32" width="1016" height="1286" fill="none" stroke="#E0822A" stroke-opacity="0.55" stroke-width="5" stroke-dasharray="27 19.44"/>
+  <rect x="32" y="32" width="151" height="22" fill="#E0822A"/>
+  
+    <text x="540" y="610.2" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="800" font-size="76" fill="#0B1320">Hero</text>
+    <text x="540" y="685.8" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="500" font-size="48" fill="#3A4658">Plumber under sink, phone lighting up on cabinet floor</text>
+    <text x="540" y="761.4" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="700" font-size="43" fill="#E0822A">4:5 · 1080×1350px</text>
+    <text x="540" y="1281" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="600" font-size="37" fill="#3A4658" opacity="0.75">PLACEHOLDER · replace with hero-under-sink.webp</text>
+</svg>

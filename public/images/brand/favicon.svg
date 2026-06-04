@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Favicon placeholder">
+  <rect width="512" height="512" fill="#F4F1E8"/>
+  <rect x="7.5" y="7.5" width="497" height="497" fill="none" stroke="#E8E3D5" stroke-width="3"/>
+  <rect x="15" y="15" width="482" height="482" fill="none" stroke="#0F5E9A" stroke-opacity="0.55" stroke-width="3" stroke-dasharray="12.8 9.216000000000001"/>
+  <rect x="15" y="15" width="72" height="10" fill="#0F5E9A"/>
+  
+    <text x="256" y="225.28" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="800" font-size="36" fill="#0B1320">Favicon</text>
+    <text x="256" y="261.12" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="500" font-size="23" fill="#3A4658">WaterLine drop/wrench mark</text>
+    <text x="256" y="296.96" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="700" font-size="20" fill="#0F5E9A">1:1 · 512×512px</text>
+    <text x="256" y="480" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="600" font-size="17" fill="#3A4658" opacity="0.75">PLACEHOLDER · replace with favicon.webp</text>
+</svg>
