@@ -12,7 +12,6 @@ import { Offer } from "@/components/Offer";
 import { RescuedCall } from "@/components/RescuedCall";
 import { First30Days } from "@/components/First30Days";
 import { WeeklyReport } from "@/components/WeeklyReport";
-import { Objections } from "@/components/Objections";
 import { FastStart } from "@/components/FastStart";
 import { FAQ } from "@/components/FAQ";
 import { Lead } from "@/components/Lead";
@@ -37,7 +36,6 @@ export default function Home() {
         <RescuedCall />
         <First30Days />
         <WeeklyReport />
-        <Objections />
         <FastStart />
         <FAQ />
         <Lead />

@@ -14,7 +14,6 @@ const columns = [
     title: "Answers",
     links: [
       { label: "The missed-call leak", href: "#problem" },
-      { label: "Straight answers", href: "#objections" },
       { label: "FAQ", href: "#faq" },
     ],
   },
