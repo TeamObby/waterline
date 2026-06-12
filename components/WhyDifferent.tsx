@@ -32,7 +32,7 @@ export function WhyDifferent() {
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
             Same number. No replacement. No extra phone chaos.
             <span className="block text-ink-muted">
-              Just fewer good calls going to voicemail.
+              You answer first. We rescue the rest.
             </span>
           </h2>
         </div>

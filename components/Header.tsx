@@ -42,7 +42,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a href="#cta" className="btn-primary !py-2.5 !text-sm">
-            Plug the leak
+            Get my Leak Check
           </a>
           {/* Hamburger (mobile only) */}
           <button
@@ -99,7 +99,7 @@ export function Header() {
             onClick={() => setOpen(false)}
             className="btn-primary mt-4 w-full"
           >
-            Plug the leak
+            Get my Leak Check
           </a>
         </nav>
       </div>

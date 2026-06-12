@@ -1,10 +1,10 @@
 const rowA = [
+  "You answer first",
+  "We rescue the rest",
+  "24/7 missed-call rescue",
   "Keep your number",
-  "Never miss a job",
   "Texts you the job",
-  "Answers voicemail calls",
-  "No new app",
-  "Same number you have now",
+  "AI instead of voicemail",
   "Live the same day",
 ];
 
@@ -12,10 +12,10 @@ const rowB = [
   "First 30 days protected",
   "One-job guarantee",
   "No setup fee",
-  "Month-to-month",
+  "Cancel any cycle",
   "No contract",
-  "Rescued-call reports",
-  "Human, not robotic",
+  "Every call recorded",
+  "Built for plumbers only",
 ];
 
 function Row({

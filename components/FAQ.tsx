@@ -2,52 +2,28 @@ import { ChevronIcon } from "./Icons";
 
 const faqs = [
   {
-    q: "Do I have to change my phone number?",
-    a: "No. Your main number stays on your truck, cards, website, and Google.",
+    q: "What happens to my number?",
+    a: "You keep your same number and carrier. We add one forwarding rule that only triggers when you don't answer. Turn it off anytime.",
   },
   {
-    q: "What happens if I answer the call?",
-    a: "WaterLine never touches it. We only step in when your phone would've sent the caller to voicemail.",
+    q: "What if I answer my own phone?",
+    a: "Then nothing changes. It only touches calls you were already missing.",
   },
   {
-    q: "Will callers know it's AI?",
-    a: "It sounds like an office assistant. If someone asks directly, it tells the truth.",
+    q: "What if my customers don't like AI?",
+    a: "They're not choosing between you and AI. They're choosing between AI and voicemail. This gets them to you faster, and every call is recorded so you can judge for yourself.",
   },
   {
-    q: "How fast do I get the job details?",
-    a: "By text, usually within about a minute of the call ending.",
+    q: "How fast is setup?",
+    a: "One forwarding rule. We set it. Live in one business day.",
   },
   {
-    q: "Can I call back from my own number?",
-    a: "Yes. You call back from the same number they dialed.",
+    q: "What does it cost?",
+    a: "$399 every 4 weeks for up to 50 rescued calls, then $4 per extra. No setup fee. No contract; cancel any cycle after the first. If we don't clearly rescue at least one real job you would've missed in the first 30 days, that cycle is refunded.",
   },
   {
-    q: "Do you charge for spam or wrong numbers?",
-    a: "No. Spam, junk, wrong numbers, robocalls, and quick hang-ups are filtered and never billed as rescued calls.",
-  },
-  {
-    q: "What if I go over 50 rescued calls?",
-    a: "It's $4 per rescued call after 50 in a 4-week period. If you're over 50 real missed calls, you're probably not short on work.",
-  },
-  {
-    q: "Is there a contract?",
-    a: "No long-term contract. You're billed every 4 weeks and can stop before the next bill.",
-  },
-  {
-    q: "Can I change my rule sheet later?",
-    a: "Yes. You can tweak service area, hours, job types, and wording any time.",
-  },
-  {
-    q: "Will WaterLine quote prices or diagnose problems?",
-    a: "No. It takes the problem, address, and urgency and gets out of the way so you can handle pricing and advice.",
-  },
-  {
-    q: "How does after-hours work?",
-    a: "You decide in the rule sheet: which calls you want after hours, what to say, what's urgent, and what can wait.",
-  },
-  {
-    q: "Who is this not for?",
-    a: "Shops that truly never miss real calls, anyone outside US residential plumbing, or anyone looking for a generic AI to replace every receptionist.",
+    q: "What if I want to stop?",
+    a: "Turn off the forwarding rule and you're back to how things are today. Your number was never ours to hold.",
   },
 ];
 

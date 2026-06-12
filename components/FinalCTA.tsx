@@ -15,7 +15,7 @@ export function FinalCTA() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="eyebrow !border-white/15 !bg-white/5 !text-water-100">
             <span className="h-1.5 w-1.5 rounded-full bg-rust-400" />
-            Plug the leak
+            You answer first. We rescue the rest.
           </span>
           <h2 className="mt-6 font-display text-4xl font-black leading-[1.05] text-paper md:text-6xl">
             You&rsquo;re already paying to make the phone ring.
@@ -24,20 +24,20 @@ export function FinalCTA() {
             </span>
           </h2>
           <p className="mt-6 text-lg text-paper/75">
-            Gut feel: how many calls hit voicemail last week? If we save even
+            Gut feel: how many calls hit voicemail last week? If we rescue even
             one real job you would&rsquo;ve missed, this covers itself.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <a href="#cta" className="btn-primary">
-              Plug the Missed-Call Leak
+              Get a 10-Minute Missed-Call Leak Check
               <ArrowRightIcon className="h-4 w-4" />
             </a>
             <a
-              href="#cta"
+              href="#fast-start"
               className="btn border border-white/20 bg-white/[0.06] text-paper hover:bg-white/[0.1] focus-visible:ring-white/20"
             >
-              Start the 30-Day Protected Run
+              See it on your own line
             </a>
           </div>
 

@@ -23,11 +23,16 @@ export function Problem() {
         <div className="max-w-3xl">
           <span className="eyebrow">The missed-call leak</span>
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
-            You&rsquo;re not losing work because you&rsquo;re bad at plumbing.
-            <span className="block text-ink-muted">
-              You&rsquo;re losing work because you&rsquo;re working.
-            </span>
+            The most expensive calls are the ones
+            <span className="block text-ink-muted">you never know about.</span>
           </h2>
+          <p className="mt-5 max-w-prose text-lg text-ink-muted">
+            You&rsquo;re under a sink, driving between jobs, or on a ladder. The
+            phone rings. Then it stops. That homeowner with a leaking water
+            heater doesn&rsquo;t leave a voicemail. Burst-pipe customers
+            don&rsquo;t leave voicemails; they call the next plumber on Google.
+            The job is gone and you never even see it.
+          </p>
         </div>
 
         <div className="mt-12 grid gap-10 md:grid-cols-2">
@@ -76,18 +81,19 @@ export function Problem() {
                 Gut check
               </p>
               <h3 className="mt-3 font-display text-3xl font-black leading-tight text-paper md:text-4xl">
-                How many calls hit voicemail last week?
+                How many of those ring out every month?
               </h3>
               <p className="mt-4 max-w-prose text-paper/70">
-                Say it was 6. If only 1 in 3 would&rsquo;ve booked,
-                that&rsquo;s 2 real jobs gone.
+                One missed emergency call is worth about $1,800. Repipes are
+                around $4,500. It only takes a couple a month to dwarf what
+                WaterLine costs.
               </p>
             </div>
 
             <dl className="grid grid-cols-3 gap-3 rounded-2xl bg-white/5 p-4 text-center">
-              <Metric value="6" label="Voicemails" />
-              <Metric value="2" label="Real jobs gone" highlight />
-              <Metric value="~$800" label="Walked away" />
+              <Metric value="~$1,800" label="Emergency call" />
+              <Metric value="~$4,500" label="Repipe" highlight />
+              <Metric value="$0" label="Voicemail left" />
             </dl>
           </div>
 

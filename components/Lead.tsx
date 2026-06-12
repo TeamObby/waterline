@@ -26,15 +26,15 @@ export function Lead() {
               Get started
             </span>
             <h2 className="mt-5 text-4xl font-black leading-[1.05] md:text-5xl">
-              Plug your missed-call leak.
+              Book your free 10-minute Leak Check.
               <span className="block text-ink-muted">
                 One short call. First 30 days protected.
               </span>
             </h2>
             <p className="mt-6 max-w-prose text-lg text-ink-muted">
-              Tell us where to reach you. We&rsquo;ll text you within a
-              business hour to set up your rule sheet and put WaterLine
-              behind your existing line.
+              Tell us where to reach you. We&rsquo;ll text you within a business
+              hour to run the Leak Check on last week&rsquo;s calls, set up your
+              rule sheet, and put WaterLine behind your existing line.
             </p>
 
             <ul className="mt-8 space-y-3">
@@ -59,7 +59,7 @@ export function Lead() {
               ) : (
                 <form action={formAction} noValidate className="p-7 md:p-9">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-water-700">
-                    Start your 30-day protected run
+                    Book your 10-minute Leak Check
                   </p>
                   <h3 className="mt-1 font-display text-2xl font-black text-ink">
                     Where should we reach you?
@@ -211,7 +211,7 @@ function SubmitButton() {
         </>
       ) : (
         <>
-          Plug the Missed-Call Leak
+          Get My 10-Minute Leak Check
           <ArrowRightIcon className="h-4 w-4" />
         </>
       )}

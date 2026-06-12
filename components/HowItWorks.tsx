@@ -63,9 +63,19 @@ export function HowItWorks() {
         <div className="max-w-3xl">
           <span className="eyebrow">How WaterLine works</span>
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
-            Same number. Your phone rings first. We only answer what
-            would&rsquo;ve gone to voicemail.
+            Miss the call. Keep the customer.
           </h2>
+          <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+            You still get first shot at every call. Your number rings you or the
+            office first, every time. Only when it would hit voicemail does the
+            system pick up, in your company name. While it&rsquo;s talking to the
+            homeowner, it&rsquo;s ringing and texting you so you can grab the call
+            back live. To the customer, it feels like a short hold, not being
+            ignored. If you&rsquo;re still tied up, it takes down the job, and the
+            details plus a recording hit your texts in under 30 seconds. And even
+            if three people call you at once, it can talk to all three so none of
+            them have to roll to voicemail or the next plumber on Google.
+          </p>
         </div>
 
         <ol className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -100,10 +110,10 @@ export function HowItWorks() {
 
         <div className="mt-12 flex flex-col items-center justify-center gap-2 rounded-2xl border border-water-500/20 bg-gradient-to-r from-water-50 via-paper to-water-50 px-6 py-6 text-center shadow-card sm:flex-row md:text-lg">
           <span className="font-display font-bold text-water-700">
-            Human beats automation.
+            It&rsquo;s not AI instead of you.
           </span>
           <span className="hidden h-1 w-1 rounded-full bg-ink/25 sm:block" />
-          <span className="text-ink-muted">Automation beats missed calls.</span>
+          <span className="text-ink-muted">It&rsquo;s AI instead of voicemail.</span>
         </div>
       </div>
     </section>

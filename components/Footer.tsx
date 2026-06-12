@@ -21,7 +21,7 @@ const columns = [
   {
     title: "Get started",
     links: [
-      { label: "Start a protected run", href: "#cta" },
+      { label: "Get my Leak Check", href: "#cta" },
       { label: "hello@waterline.example", href: "mailto:hello@waterline.example" },
     ],
   },

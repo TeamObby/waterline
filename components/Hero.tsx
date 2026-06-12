@@ -10,26 +10,34 @@ export function Hero() {
         <div className="flex flex-col justify-center">
           <span className="eyebrow">
             <span className="h-1.5 w-1.5 rounded-full bg-rust-500" />
-            For 1–3 truck residential plumbers
+            24/7 Missed-Call Rescue System for plumbers
           </span>
           <h1 className="mt-5 font-display text-[2.6rem] font-black leading-[1.05] tracking-tight text-ink sm:text-5xl md:text-[3.5rem]">
-            Stop losing plumbing jobs to{" "}
+            Plumbers: Stop donating emergency jobs to the{" "}
             <span className="relative whitespace-nowrap">
-              <span className="relative z-10">voicemail.</span>
+              <span className="relative z-10">next guy on Google.</span>
               <span className="absolute bottom-1 left-0 right-0 z-0 h-3 bg-rust-400/50" />
             </span>
           </h1>
           <p className="mt-6 max-w-prose text-lg leading-relaxed text-ink-muted">
-            Your phone rings you first. If you can&rsquo;t grab it and it
-            would go to voicemail, WaterLine answers instead, takes the
-            details, and texts you the job so you can call back fast.
+            We run a 24/7 Missed-Call Rescue System for plumbers.{" "}
+            <span className="font-semibold text-ink">You answer first. We rescue the rest.</span>{" "}
+            Turn missed calls into rescued plumbing jobs without hiring anyone,
+            changing your number, or letting AI touch a call you would have
+            answered yourself.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a href="#cta" className="btn-primary">
-              Plug the Missed-Call Leak
+              Get a 10-Minute Missed-Call Leak Check
               <ArrowRightIcon className="h-4 w-4" />
             </a>
-            <a href="#how" className="btn-ghost">How it works</a>
+            <a
+              href="#fast-start"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-water-700 underline-offset-4 hover:underline"
+            >
+              Or hear it on your own line
+              <ArrowRightIcon className="h-3.5 w-3.5" />
+            </a>
           </div>
           <div className="mt-6 flex items-start gap-3 rounded-xl border border-leaf-500/20 bg-leaf-500/[0.06] p-4">
             <ShieldIcon className="mt-0.5 h-5 w-5 text-leaf-600" />

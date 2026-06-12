@@ -3,10 +3,10 @@ import { CheckIcon, ShieldIcon } from "./Icons";
 const includes = [
   "Up to 50 rescued calls every 4 weeks",
   "$4 per rescued call after 50",
+  "No setup fee",
+  "No contract — cancel any cycle after the first",
   "Your custom rule sheet built in one short call",
   "Weekly Results Report every Monday at 7am",
-  "No setup fee",
-  "No long-term contract — stop before the next bill",
 ];
 
 export function Offer() {
@@ -16,12 +16,13 @@ export function Offer() {
         <div className="max-w-3xl">
           <span className="eyebrow">The offer</span>
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
-            One price. Built for residential plumbers.
+            What it costs (and why one job pays for it).
           </h2>
           <p className="mt-5 max-w-prose text-lg text-ink-muted">
-            If you don&rsquo;t believe you&rsquo;re losing at least one real
-            job a month to voicemail, you shouldn&rsquo;t sign up. This only
-            makes sense if you know there&rsquo;s a leak.
+            One job pays for it. Drains are about $400; water heaters about
+            $1,800; repipes about $4,500 &mdash; plenty in the $300&ndash;$1,000+
+            range. If you don&rsquo;t believe you&rsquo;re losing at least one
+            real job a month to voicemail, you shouldn&rsquo;t sign up.
           </p>
         </div>
 
@@ -41,7 +42,8 @@ export function Offer() {
               </span>
             </div>
             <p className="relative mt-2 text-sm text-ink-muted">
-              Billed every 4 weeks. Stop before the next bill if you&rsquo;re done.
+              For up to 50 rescued calls, then $4 per extra. Cancel any cycle
+              after the first.
             </p>
 
             <ul className="relative mt-7 grid gap-2.5">
@@ -63,8 +65,17 @@ export function Offer() {
               </p>
             </div>
 
+            <div className="relative mt-4 rounded-2xl border border-leaf-500/25 bg-leaf-500/[0.06] p-4 text-sm leading-relaxed text-ink">
+              <p>
+                <span className="font-semibold text-leaf-600">Risk floor:</span>{" "}
+                It only ever touches calls you were already missing. It
+                cannot lose you a customer you would have answered.{" "}
+                <span className="font-semibold">Worst case, you&rsquo;re back to voicemail.</span>
+              </p>
+            </div>
+
             <a href="#cta" className="btn-primary mt-8 w-full">
-              Plug the Missed-Call Leak
+              Get a 10-Minute Missed-Call Leak Check
             </a>
           </article>
 
@@ -87,10 +98,11 @@ export function Offer() {
             </h3>
 
             <p className="mt-4 text-ink-muted">
-              If, after 30 days, we can&rsquo;t both point to at least one real
-              job WaterLine clearly saved that you would&rsquo;ve missed
-              &mdash; real homeowner, real address, a job you couldn&rsquo;t
-              have picked up live &mdash; you get that first 4 weeks back.
+              If we don&rsquo;t clearly rescue at least one real job you
+              would&rsquo;ve missed in the first 30 days &mdash; real homeowner,
+              real address, a job you couldn&rsquo;t have picked up live &mdash;
+              we refund that cycle.{" "}
+              <span className="font-semibold text-ink">No arguing.</span>
             </p>
 
             <ul className="mt-6 space-y-3 text-sm">

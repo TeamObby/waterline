@@ -4,23 +4,25 @@ import { useMemo, useState } from "react";
 import { DollarIcon, PhoneIcon, ShieldIcon, WrenchIcon } from "./Icons";
 
 const WATERLINE_COST = 399; // every 4 weeks
+const DAYS_PER_MONTH = 30; // tunable: how many days a month we count calls over
 
 const formatMoney = (n: number) =>
   "$" + Math.round(n).toLocaleString("en-US");
 
 export function Calculator() {
-  const [missedPerWeek, setMissedPerWeek] = useState(6);
+  const [callsPerDay, setCallsPerDay] = useState(8);
+  const [pctMissed, setPctMissed] = useState(20); // %
   const [avgJob, setAvgJob] = useState(400);
-  const [bookingRate, setBookingRate] = useState(33); // %
 
-  const { jobsPerWeek, perWeek, perMonth, perYear, coversBy } = useMemo(() => {
-    const jobsPerWeek = (missedPerWeek * bookingRate) / 100;
-    const perWeek = jobsPerWeek * avgJob;
-    const perMonth = perWeek * 4;
-    const perYear = perWeek * 52;
-    const coversBy = perMonth / WATERLINE_COST;
-    return { jobsPerWeek, perWeek, perMonth, perYear, coversBy };
-  }, [missedPerWeek, avgJob, bookingRate]);
+  const { missedPerMonth, perWeek, perMonth, perYear, coversBy } =
+    useMemo(() => {
+      const missedPerMonth = callsPerDay * DAYS_PER_MONTH * (pctMissed / 100);
+      const perMonth = missedPerMonth * avgJob;
+      const perWeek = perMonth / 4.3;
+      const perYear = perMonth * 12;
+      const coversBy = perMonth / WATERLINE_COST;
+      return { missedPerMonth, perWeek, perMonth, perYear, coversBy };
+    }, [callsPerDay, pctMissed, avgJob]);
 
   return (
     <section id="calculator" className="relative bg-paper py-20 md:py-28">
@@ -32,12 +34,12 @@ export function Calculator() {
             Missed-call leak check
           </span>
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
-            Do the math on your own numbers.
+            See what missed calls are really costing you.
           </h2>
           <p className="mt-5 max-w-prose text-lg text-ink-muted">
-            Three sliders. Real numbers. See what voicemail is quietly
-            costing you every month &mdash; and how fast WaterLine pays for
-            itself.
+            Three sliders &mdash; calls a day, how many you miss, your average
+            job. See what voicemail is quietly costing you every month, then
+            let us run it on your real calls.
           </p>
         </div>
 
@@ -49,22 +51,34 @@ export function Calculator() {
             </p>
 
             <Slider
-              label="Missed calls per week"
-              hint="Calls that hit voicemail because you couldn't grab the phone."
+              label="Calls per day"
+              hint="Roughly how many calls come into your business line on a normal day."
               min={0}
-              max={25}
+              max={30}
               step={1}
-              value={missedPerWeek}
-              onChange={setMissedPerWeek}
-              display={`${missedPerWeek} ${missedPerWeek === 1 ? "call" : "calls"}`}
+              value={callsPerDay}
+              onChange={setCallsPerDay}
+              display={`${callsPerDay} ${callsPerDay === 1 ? "call" : "calls"}`}
               icon={<PhoneIcon className="h-4 w-4 text-water-700" />}
             />
 
             <Slider
+              label="% you miss"
+              hint="The share that hits voicemail because you couldn't grab the phone."
+              min={0}
+              max={60}
+              step={1}
+              value={pctMissed}
+              onChange={setPctMissed}
+              display={`${pctMissed}%`}
+              icon={<DollarIcon className="h-4 w-4 text-water-700" />}
+            />
+
+            <Slider
               label="Your average job"
-              hint="Drain, faucet, water heater &mdash; whatever your typical residential ticket runs."
+              hint="Drain, water heater, repipe &mdash; whatever your typical residential ticket runs."
               min={150}
-              max={2500}
+              max={4500}
               step={50}
               value={avgJob}
               onChange={setAvgJob}
@@ -72,24 +86,12 @@ export function Calculator() {
               icon={<WrenchIcon className="h-4 w-4 text-water-700" />}
             />
 
-            <Slider
-              label="How many would've booked?"
-              hint="Most plumbers land 1 in 3 missed calls if they reach back fast. Drag to your gut feel."
-              min={10}
-              max={60}
-              step={1}
-              value={bookingRate}
-              onChange={setBookingRate}
-              display={`${bookingRate}%`}
-              icon={<DollarIcon className="h-4 w-4 text-water-700" />}
-            />
-
             <button
               type="button"
               onClick={() => {
-                setMissedPerWeek(6);
+                setCallsPerDay(8);
+                setPctMissed(20);
                 setAvgJob(400);
-                setBookingRate(33);
               }}
               className="mt-6 text-xs font-medium text-ink-muted underline-offset-4 hover:text-ink hover:underline"
             >
@@ -109,7 +111,7 @@ export function Calculator() {
             />
             <div className="relative">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-water-200">
-                Walking out the door
+                Voicemail is probably costing you about
               </p>
 
               <div className="mt-3 flex items-end gap-3">
@@ -119,9 +121,9 @@ export function Calculator() {
                 <span className="pb-2 text-sm text-paper/70">/ month</span>
               </div>
               <p className="mt-2 text-sm text-paper/70">
-                Based on{" "}
+                That&rsquo;s{" "}
                 <span className="font-semibold text-paper">
-                  {jobsPerWeek.toFixed(1)} jobs a week
+                  {Math.round(missedPerMonth)} missed calls a month
                 </span>{" "}
                 slipping to the next plumber on Google.
               </p>
@@ -130,8 +132,8 @@ export function Calculator() {
                 <Stat label="Per week" value={formatMoney(perWeek)} />
                 <Stat label="Per year" value={formatMoney(perYear)} highlight />
                 <Stat
-                  label="Jobs lost / yr"
-                  value={Math.round(jobsPerWeek * 52).toLocaleString()}
+                  label="Missed calls / yr"
+                  value={Math.round(missedPerMonth * 12).toLocaleString()}
                 />
               </dl>
 
@@ -170,20 +172,25 @@ export function Calculator() {
                 </div>
               </div>
 
-              <a href="#cta" className="btn-primary mt-6 w-full">
-                Plug this leak in 30 days
+              <p className="mt-6 text-sm leading-relaxed text-paper/85">
+                Want us to run this on last week&rsquo;s real calls instead of
+                guesses?
+              </p>
+              <a href="#cta" className="btn-primary mt-3 w-full">
+                Get My Leak Check
               </a>
               <p className="mt-3 text-center text-xs text-paper/60">
-                One-Job Guarantee. First 4 weeks refunded if we don&rsquo;t clearly save one.
+                Free 10-minute Missed-Call Leak Check. No setup, no contract.
               </p>
             </div>
           </div>
         </div>
 
         <p className="mt-6 max-w-prose text-xs text-ink-muted">
-          Rough math, your numbers. Not a quote. Most 1&ndash;3 truck shops we
-          talk to land between $1,500 and $6,000 in missed jobs a month before
-          they start tracking it.
+          Rough math, your numbers. Not a quote &mdash; it counts every missed
+          call at your average job. The Leak Check runs the same math on your
+          real calls from last week so you&rsquo;re working off facts, not a
+          slider.
         </p>
       </div>
     </section>
