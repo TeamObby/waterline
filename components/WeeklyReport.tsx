@@ -1,3 +1,5 @@
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
+
 const reportLines = [
   { label: "Total calls in", value: "47" },
   { label: "Calls you answered yourself", value: "31" },
@@ -17,7 +19,7 @@ export function WeeklyReport() {
     <section className="bg-paper py-20 md:py-28">
       <div className="container-page">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-16">
-          <div>
+          <Reveal>
             <span className="eyebrow">Weekly Results Report</span>
             <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
               One email. Every Monday at 7am.
@@ -26,7 +28,7 @@ export function WeeklyReport() {
               Your scorecard for the missed-call leak &mdash; and proof the
               thing is working. Good week or bad, the report still sends.
             </p>
-            <ul className="mt-7 space-y-2.5 text-ink">
+            <Stagger as="ul" className="mt-7 space-y-2.5 text-ink">
               <Bullet>Total calls in</Bullet>
               <Bullet>Calls you answered yourself</Bullet>
               <Bullet>
@@ -34,7 +36,7 @@ export function WeeklyReport() {
               </Bullet>
               <Bullet>Junk filtered out</Bullet>
               <Bullet>Rough dollars captured based on your job mix</Bullet>
-            </ul>
+            </Stagger>
             <p className="mt-7 max-w-prose text-ink-muted">
               You&rsquo;re already paying to make the phone ring.{" "}
               <span className="font-semibold text-ink">
@@ -42,10 +44,10 @@ export function WeeklyReport() {
                 voicemail.
               </span>
             </p>
-          </div>
+          </Reveal>
 
           {/* Email mock */}
-          <div className="relative">
+          <Reveal delay={0.1} className="relative">
             <div className="absolute inset-0 -z-10 translate-x-3 translate-y-3 rounded-3xl bg-water-100" />
             <div className="overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-lift">
               <div className="flex items-center justify-between border-b border-ink/8 bg-paper-warm px-5 py-3 text-xs text-ink-muted">
@@ -82,9 +84,10 @@ export function WeeklyReport() {
                   <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
                     Rescued this week
                   </p>
-                  <ul className="mt-3 space-y-2">
+                  <Stagger as="ul" className="mt-3 space-y-2">
                     {rescued.map((r) => (
-                      <li
+                      <StaggerItem
+                        as="li"
                         key={r.name}
                         className="flex items-start justify-between gap-4 rounded-xl border border-ink/8 bg-paper-warm px-4 py-2.5 text-sm"
                       >
@@ -94,9 +97,9 @@ export function WeeklyReport() {
                           <span className="block text-xs text-ink-muted">{r.note}</span>
                         </span>
                         <span className="pill bg-leaf-500/10 text-leaf-600">rescued</span>
-                      </li>
+                      </StaggerItem>
                     ))}
-                  </ul>
+                  </Stagger>
                 </div>
 
                 <p className="mt-6 text-xs text-ink-muted">
@@ -104,7 +107,7 @@ export function WeeklyReport() {
                 </p>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
@@ -113,9 +116,9 @@ export function WeeklyReport() {
 
 function Bullet({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-start gap-3">
+    <StaggerItem as="li" className="flex items-start gap-3">
       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-water-500" />
       <span>{children}</span>
-    </li>
+    </StaggerItem>
   );
 }

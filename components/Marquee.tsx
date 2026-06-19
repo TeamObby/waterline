@@ -1,3 +1,5 @@
+import { Reveal } from "./motion/Reveal";
+
 const items = [
   "You answer first",
   "We rescue the rest",
@@ -19,6 +21,7 @@ export function Marquee() {
   return (
     <section aria-label="What you get with WaterLine" className="py-8 md:py-12">
       <div className="container-page">
+        <Reveal>
         <div
           className="overflow-hidden border-y border-rust-400/25 bg-rust-400/[0.10]"
           style={{
@@ -47,6 +50,7 @@ export function Marquee() {
             ))}
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   );

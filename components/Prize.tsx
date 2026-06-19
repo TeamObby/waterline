@@ -1,4 +1,5 @@
 import { DollarIcon, ClockIcon, ArrowRightIcon } from "./Icons";
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
 
 const wins = [
   {
@@ -17,7 +18,7 @@ export function Prize() {
   return (
     <section className="bg-paper py-20 md:py-28">
       <div className="container-page">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <span className="eyebrow">
             <span className="h-1.5 w-1.5 rounded-full bg-rust-500" />
             The prize
@@ -30,11 +31,11 @@ export function Prize() {
             all stay with your shop instead of rolling to voicemail or down the
             Google list.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <Stagger className="mt-12 grid gap-5 md:grid-cols-2">
           {wins.map((w) => (
-            <article
+            <StaggerItem
               key={w.label}
               className="card p-7 transition hover:-translate-y-0.5 hover:shadow-lift md:p-9"
             >
@@ -45,11 +46,12 @@ export function Prize() {
                 {w.label}
               </h3>
               <p className="mt-3 leading-relaxed text-ink-muted">{w.body}</p>
-            </article>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
         {/* Pull-quote */}
+        <Reveal>
         <figure className="mt-10 overflow-hidden rounded-3xl border border-rust-500/20 bg-gradient-to-br from-rust-400/[0.10] to-paper p-8 shadow-card md:p-12">
           <blockquote className="font-display text-2xl font-black leading-snug text-ink md:text-3xl">
             &ldquo;Stop donating emergency jobs to the next plumber on Google,
@@ -60,6 +62,7 @@ export function Prize() {
             <ArrowRightIcon className="h-4 w-4" />
           </a>
         </figure>
+        </Reveal>
       </div>
     </section>
   );

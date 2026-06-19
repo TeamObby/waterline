@@ -1,4 +1,5 @@
 import { PhoneIcon, ChatIcon, CheckIcon, ArrowRightIcon } from "./Icons";
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
 
 const demoSteps = [
   {
@@ -28,7 +29,7 @@ export function FastStart() {
       <div className="absolute inset-x-0 top-0 -z-10 h-56 bg-gradient-to-b from-water-50 to-transparent" />
       <div className="container-page">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
-          <div>
+          <Reveal>
             <span className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-rust-500" />
               Fast start
@@ -50,15 +51,15 @@ export function FastStart() {
               Once forwarding is on, the next missed call can be your first
               rescued job.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="rounded-3xl border border-ink/8 bg-white p-7 shadow-lift md:p-9">
+          <Reveal delay={0.1} className="rounded-3xl border border-ink/8 bg-white p-7 shadow-lift md:p-9">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-water-700">
               On the call, you&rsquo;ll
             </p>
-            <ol className="mt-6 grid gap-4">
+            <Stagger as="ul" className="mt-6 grid gap-4">
               {demoSteps.map((s, i) => (
-                <li key={s.text} className="flex items-start gap-4">
+                <StaggerItem as="li" key={s.text} className="flex items-start gap-4">
                   <span className="relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-water-50 text-water-700">
                     <s.Icon className="h-5 w-5" />
                     <span className="absolute -right-1.5 -top-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-ink text-[11px] font-bold text-paper">
@@ -68,10 +69,10 @@ export function FastStart() {
                   <span className="pt-2 text-sm font-medium leading-snug text-ink">
                     {s.text}
                   </span>
-                </li>
+                </StaggerItem>
               ))}
-            </ol>
-          </div>
+            </Stagger>
+          </Reveal>
         </div>
       </div>
     </section>

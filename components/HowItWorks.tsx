@@ -7,6 +7,7 @@ import {
   DollarIcon,
   CheckIcon,
 } from "./Icons";
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
 
 const steps = [
   {
@@ -60,7 +61,7 @@ export function HowItWorks() {
   return (
     <section id="how" className="bg-paper-warm py-20 md:py-28">
       <div className="container-page">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <span className="eyebrow">How WaterLine works</span>
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
             Miss the call. Keep the customer.
@@ -76,11 +77,12 @@ export function HowItWorks() {
             if three people call you at once, it can talk to all three so none of
             them have to roll to voicemail or the next plumber on Google.
           </p>
-        </div>
+        </Reveal>
 
-        <ol className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <Stagger as="ul" className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {steps.map((s, i) => (
-            <li
+            <StaggerItem
+              as="li"
               key={s.title}
               className="group relative rounded-2xl border border-ink/8 bg-white p-6 shadow-card transition duration-200 hover:-translate-y-1 hover:border-water-500/30 hover:shadow-lift"
             >
@@ -104,17 +106,17 @@ export function HowItWorks() {
               <p className="relative mt-1.5 text-sm leading-relaxed text-ink-muted">
                 {s.body}
               </p>
-            </li>
+            </StaggerItem>
           ))}
-        </ol>
+        </Stagger>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-2 rounded-2xl border border-water-500/20 bg-gradient-to-r from-water-50 via-paper to-water-50 px-6 py-6 text-center shadow-card sm:flex-row md:text-lg">
+        <Reveal className="mt-12 flex flex-col items-center justify-center gap-2 rounded-2xl border border-water-500/20 bg-gradient-to-r from-water-50 via-paper to-water-50 px-6 py-6 text-center shadow-card sm:flex-row md:text-lg">
           <span className="font-display font-bold text-water-700">
             It&rsquo;s not AI instead of you.
           </span>
           <span className="hidden h-1 w-1 rounded-full bg-ink/25 sm:block" />
           <span className="text-ink-muted">It&rsquo;s AI instead of voicemail.</span>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

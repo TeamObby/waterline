@@ -1,4 +1,11 @@
+"use client";
+
+import { useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronIcon } from "./Icons";
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
+
+const EASE: [number, number, number, number] = [0.21, 0.47, 0.32, 0.98];
 
 const faqs = [
   {
@@ -32,7 +39,7 @@ export function FAQ() {
     <section id="faq" className="bg-paper py-20 md:py-28">
       <div className="container-page">
         <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-16">
-          <div>
+          <Reveal>
             <span className="eyebrow">FAQ</span>
             <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
               Plain answers.
@@ -47,27 +54,61 @@ export function FAQ() {
               </a>
               . We answer ourselves.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="divide-y divide-ink/8 rounded-2xl border border-ink/8 bg-white shadow-card">
+          <Stagger className="divide-y divide-ink/8 rounded-2xl border border-ink/8 bg-white shadow-card">
             {faqs.map((f) => (
-              <details key={f.q} className="group px-5 py-4 sm:px-6">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left">
-                  <span className="font-display text-base font-semibold text-ink sm:text-lg">
-                    {f.q}
-                  </span>
-                  <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-paper-warm text-ink-muted transition group-open:rotate-180 group-open:bg-water-100 group-open:text-water-700">
-                    <ChevronIcon className="h-4 w-4" />
-                  </span>
-                </summary>
-                <p className="mt-3 max-w-prose text-sm leading-relaxed text-ink-muted">
-                  {f.a}
-                </p>
-              </details>
+              <StaggerItem key={f.q}>
+                <FaqItem q={f.q} a={f.a} />
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </div>
     </section>
+  );
+}
+
+function FaqItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  const reduce = useReducedMotion();
+  return (
+    <div className="px-5 py-4 sm:px-6">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-4 text-left"
+      >
+        <span className="font-display text-base font-semibold text-ink sm:text-lg">
+          {q}
+        </span>
+        <span
+          className={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition ${
+            open
+              ? "rotate-180 bg-water-100 text-water-700"
+              : "bg-paper-warm text-ink-muted"
+          }`}
+        >
+          <ChevronIcon className="h-4 w-4" />
+        </span>
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: reduce ? 0 : 0.3, ease: EASE }}
+            className="overflow-hidden"
+          >
+            <p className="mt-3 max-w-prose text-sm leading-relaxed text-ink-muted">
+              {a}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

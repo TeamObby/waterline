@@ -1,4 +1,5 @@
 import { CheckIcon, XIcon } from "./Icons";
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
 
 const comparisons = [
   {
@@ -27,7 +28,7 @@ export function WhyDifferent() {
   return (
     <section className="bg-paper py-20 md:py-28">
       <div className="container-page">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <span className="eyebrow">Why this is different</span>
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
             Same number. No replacement. No extra phone chaos.
@@ -35,11 +36,11 @@ export function WhyDifferent() {
               You answer first. We rescue the rest.
             </span>
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <Stagger className="mt-12 grid gap-5 md:grid-cols-2">
           {comparisons.map((c) => (
-            <article
+            <StaggerItem
               key={c.label}
               className="group relative overflow-hidden rounded-3xl border border-ink/8 bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:shadow-lift"
             >
@@ -85,9 +86,9 @@ export function WhyDifferent() {
                   </p>
                 </div>
               </div>
-            </article>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

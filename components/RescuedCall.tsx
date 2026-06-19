@@ -1,4 +1,5 @@
 import { CheckIcon, XIcon } from "./Icons";
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
 
 const counts = [
   "A real homeowner",
@@ -21,7 +22,7 @@ export function RescuedCall() {
   return (
     <section className="bg-paper py-20 md:py-28">
       <div className="container-page">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <span className="eyebrow">What counts as a rescued call</span>
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
             Billing should feel obvious and fair.
@@ -30,10 +31,10 @@ export function RescuedCall() {
             Your Weekly Results Report shows every rescued call by name and
             address &mdash; so you can see exactly what you&rsquo;re paying for.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <article className="card p-7">
+        <Stagger className="mt-12 grid gap-6 md:grid-cols-2">
+          <StaggerItem className="card p-7">
             <div className="flex items-center gap-3">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-leaf-500 text-white">
                 <CheckIcon className="h-5 w-5" />
@@ -50,9 +51,9 @@ export function RescuedCall() {
                 </li>
               ))}
             </ul>
-          </article>
+          </StaggerItem>
 
-          <article className="card p-7">
+          <StaggerItem className="card p-7">
             <div className="flex items-center gap-3">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-ink/85 text-paper">
                 <XIcon className="h-5 w-5" />
@@ -69,8 +70,8 @@ export function RescuedCall() {
                 </li>
               ))}
             </ul>
-          </article>
-        </div>
+          </StaggerItem>
+        </Stagger>
       </div>
     </section>
   );

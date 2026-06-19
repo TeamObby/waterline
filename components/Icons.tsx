@@ -175,3 +175,84 @@ export function ListIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function LadderIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={base} {...props}>
+      <path
+        d="M8 3v18M16 3v18M8 7h8M8 11h8M8 15h8M8 19h8"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function CarIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={base} {...props}>
+      <path
+        d="M4 13l1.6-4.1A2 2 0 0 1 7.5 7.6h9a2 2 0 0 1 1.9 1.3L20 13v4H4v-4Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path d="M3.5 17h17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="8" cy="17" r="1.6" fill="currentColor" />
+      <circle cx="16" cy="17" r="1.6" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function UsersIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={base} {...props}>
+      <circle cx="9" cy="8" r="3" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M3.5 19a5.5 5.5 0 0 1 11 0"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M16 5.6a3 3 0 0 1 0 5.8M15.5 13.7A5.5 5.5 0 0 1 20.5 19"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function MoonIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={base} {...props}>
+      <path
+        d="M20 13.5A8 8 0 1 1 10.5 4 6.5 6.5 0 0 0 20 13.5Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function MissedCallIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={base} {...props}>
+      <path
+        d="M5 4.5c0-.83.67-1.5 1.5-1.5h2.1c.7 0 1.3.48 1.46 1.16l.78 3.3c.14.6-.07 1.22-.55 1.6l-1.4 1.13a12 12 0 0 0 5.42 5.42l1.13-1.4a1.5 1.5 0 0 1 1.6-.55l3.3.78A1.5 1.5 0 0 1 21 15.9V18a1.5 1.5 0 0 1-1.5 1.5C11.5 19.5 4.5 12.5 4.5 4.5Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M15 4.5l4 4M19 4.5l-4 4"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}

@@ -11,6 +11,7 @@ import {
 } from "./Icons";
 import { submitLead } from "@/app/actions";
 import { emptyLeadState } from "@/lib/lead-form";
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
 
 export function Lead() {
   const [state, formAction] = useActionState(submitLead, emptyLeadState);
@@ -20,7 +21,7 @@ export function Lead() {
       <div className="container-page">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           {/* Left: pitch */}
-          <div>
+          <Reveal>
             <span className="eyebrow">
               <span className="h-1.5 w-1.5 rounded-full bg-rust-500" />
               Get started
@@ -37,7 +38,7 @@ export function Lead() {
               rule sheet, and put WaterLine behind your existing line.
             </p>
 
-            <ul className="mt-8 space-y-3">
+            <Stagger as="ul" className="mt-8 space-y-3">
               <PromiseLine icon={<PhoneIcon className="h-4 w-4" />}>
                 We text you, not call &mdash; you can read it under a sink.
               </PromiseLine>
@@ -47,11 +48,11 @@ export function Lead() {
               <PromiseLine icon={<ShieldIcon className="h-4 w-4" />}>
                 One-Job Guarantee. No saved job in 30 days = full refund.
               </PromiseLine>
-            </ul>
-          </div>
+            </Stagger>
+          </Reveal>
 
           {/* Right: form */}
-          <div className="relative">
+          <Reveal delay={0.1} className="relative">
             <div className="absolute inset-0 -z-10 translate-x-3 translate-y-3 rounded-3xl bg-water-100" />
             <div className="overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-lift">
               {state.ok ? (
@@ -112,7 +113,7 @@ export function Lead() {
                 </form>
               )}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
@@ -127,12 +128,12 @@ function PromiseLine({
   children: React.ReactNode;
 }) {
   return (
-    <li className="flex items-start gap-3 text-ink">
+    <StaggerItem as="li" className="flex items-start gap-3 text-ink">
       <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-water-50 text-water-700">
         {icon}
       </span>
       <span className="text-sm leading-relaxed">{children}</span>
-    </li>
+    </StaggerItem>
   );
 }
 

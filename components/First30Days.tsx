@@ -9,6 +9,7 @@ import {
   WrenchIcon,
   CheckIcon,
 } from "./Icons";
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
 
 const timeline = [
   {
@@ -43,21 +44,22 @@ export function First30Days() {
   return (
     <section className="bg-paper-warm py-20 md:py-28">
       <div className="container-page">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <span className="eyebrow">Your first 30 days</span>
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
             One short call to set up. Then it runs in the background.
           </h2>
-        </div>
+        </Reveal>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:items-center">
           {/* Accordion */}
-          <ol className="space-y-3">
+          <Stagger as="ul" className="space-y-3">
             {timeline.map((t, i) => {
               const isOpen = open === i;
               const StepIcon = t.Icon;
               return (
-                <li
+                <StaggerItem
+                  as="li"
                   key={t.title}
                   className={`overflow-hidden rounded-2xl border bg-white transition duration-200 ${
                     isOpen
@@ -121,13 +123,16 @@ export function First30Days() {
                       </p>
                     </div>
                   </div>
-                </li>
+                </StaggerItem>
               );
             })}
-          </ol>
+          </Stagger>
 
           {/* Showcase panel — distinct artifact per step */}
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-ink p-7 text-paper shadow-lift">
+          <Reveal
+            delay={0.1}
+            className="relative overflow-hidden rounded-3xl border border-white/10 bg-ink p-7 text-paper shadow-lift"
+          >
             <div
               aria-hidden
               className="absolute inset-0 -z-0 opacity-70"
@@ -159,16 +164,16 @@ export function First30Days() {
                 </span>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
-        <div className="mt-10 flex items-start gap-3 rounded-2xl border border-leaf-500/25 bg-leaf-500/[0.06] p-5">
+        <Reveal className="mt-10 flex items-start gap-3 rounded-2xl border border-leaf-500/25 bg-leaf-500/[0.06] p-5">
           <ShieldIcon className="mt-0.5 h-5 w-5 text-leaf-600" />
           <p className="text-sm leading-relaxed text-ink">
             <span className="font-semibold text-leaf-600">No saved job in 30 days?</span>{" "}
             Your first 4 weeks are refunded. You keep any jobs you did book either way.
           </p>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { PhoneIcon, ShieldIcon, WrenchIcon } from "./Icons";
+import { Reveal } from "./motion/Reveal";
+import { CountUp } from "./motion/CountUp";
 
 const WATERLINE_COST = 399; // every 4 weeks
 
@@ -26,7 +28,7 @@ export function Calculator() {
     <section id="calculator" className="relative bg-paper py-20 md:py-28">
       <div className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-paper-warm to-transparent" />
       <div className="container-page">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <span className="eyebrow">
             <span className="h-1.5 w-1.5 rounded-full bg-rust-500" />
             Missed-call leak check
@@ -39,11 +41,11 @@ export function Calculator() {
             what voicemail is quietly costing you every month, then let us run
             it on your real calls.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.05fr_1fr]">
           {/* Inputs */}
-          <div className="card overflow-hidden p-7 md:p-9">
+          <Reveal className="card overflow-hidden p-7 md:p-9">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted">
               Your numbers
             </p>
@@ -95,10 +97,13 @@ export function Calculator() {
                 number above is almost always too low &mdash; not too high.
               </p>
             </div>
-          </div>
+          </Reveal>
 
           {/* Results */}
-          <div className="relative overflow-hidden rounded-3xl border border-ink/10 bg-ink p-7 text-paper shadow-lift md:p-9">
+          <Reveal
+            delay={0.1}
+            className="relative overflow-hidden rounded-3xl border border-ink/10 bg-ink p-7 text-paper shadow-lift md:p-9"
+          >
             <div
               aria-hidden
               className="absolute inset-0 -z-0 opacity-60"
@@ -113,9 +118,12 @@ export function Calculator() {
               </p>
 
               <div className="mt-3 flex items-end gap-3">
-                <span className="font-display text-5xl font-semibold leading-none text-paper sm:text-6xl md:text-7xl">
-                  {formatMoney(perMonth)}
-                </span>
+                <CountUp
+                  value={perMonth}
+                  prefix="$"
+                  duration={0.8}
+                  className="font-display text-5xl font-semibold leading-none text-paper sm:text-6xl md:text-7xl"
+                />
                 <span className="pb-2 text-sm text-paper/70">/ month</span>
               </div>
               <p className="mt-2 text-sm text-paper/70">
@@ -127,12 +135,9 @@ export function Calculator() {
               </p>
 
               <dl className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                <Stat label="Per week" value={formatMoney(perWeek)} />
-                <Stat label="Per year" value={formatMoney(perYear)} highlight />
-                <Stat
-                  label="Missed calls / yr"
-                  value={Math.round(missedPerMonth * 12).toLocaleString()}
-                />
+                <Stat label="Per week" value={perWeek} prefix="$" />
+                <Stat label="Per year" value={perYear} prefix="$" highlight />
+                <Stat label="Missed calls / yr" value={missedPerMonth * 12} />
               </dl>
 
               <div className="my-7 h-px w-full bg-white/10" />
@@ -181,7 +186,7 @@ export function Calculator() {
                 Free 10-minute Missed-Call Leak Check. No setup, no contract.
               </p>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         <p className="mt-6 max-w-prose text-xs text-ink-muted">
@@ -249,10 +254,12 @@ function Slider({
 function Stat({
   label,
   value,
+  prefix = "",
   highlight = false,
 }: {
   label: string;
-  value: string;
+  value: number;
+  prefix?: string;
   highlight?: boolean;
 }) {
   return (
@@ -265,7 +272,7 @@ function Stat({
           highlight ? "text-rust-400" : "text-paper"
         }`}
       >
-        {value}
+        <CountUp value={value} prefix={prefix} duration={0.8} />
       </dd>
     </div>
   );

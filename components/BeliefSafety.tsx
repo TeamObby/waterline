@@ -1,4 +1,5 @@
 import { CheckIcon, ShieldIcon } from "./Icons";
+import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
 
 const proofs = [
   {
@@ -31,7 +32,7 @@ export function BeliefSafety() {
   return (
     <section className="bg-paper-warm py-20 md:py-28">
       <div className="container-page">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <span className="eyebrow">
             <span className="h-1.5 w-1.5 rounded-full bg-rust-500" />
             Proof, not platitudes
@@ -43,11 +44,11 @@ export function BeliefSafety() {
             The real fear is simple: &ldquo;AI will embarrass my shop.&rdquo; So
             we give proof, not platitudes.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <Stagger className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {proofs.map((p) => (
-            <article
+            <StaggerItem
               key={p.title}
               className="rounded-2xl border border-ink/8 bg-white p-6 shadow-card"
             >
@@ -60,17 +61,17 @@ export function BeliefSafety() {
               <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">
                 {p.body}
               </p>
-            </article>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
-        <div className="mt-10 flex items-start gap-3 rounded-2xl border border-leaf-500/25 bg-leaf-500/[0.07] p-5 md:items-center">
+        <Reveal className="mt-10 flex items-start gap-3 rounded-2xl border border-leaf-500/25 bg-leaf-500/[0.07] p-5 md:items-center">
           <ShieldIcon className="mt-0.5 h-5 w-5 shrink-0 text-leaf-600 md:mt-0" />
           <p className="text-ink">
             <span className="font-semibold">Every call is recorded.</span> If you
             hear something you don&rsquo;t like, we fix it.
           </p>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { Logo } from "./Logo";
+import { Reveal } from "./motion/Reveal";
 
 const columns = [
   {
@@ -128,9 +129,11 @@ export function Footer() {
         aria-hidden
         className="pointer-events-none relative z-0 -mt-14 flex h-[14vw] items-start justify-center overflow-hidden md:-mt-20"
       >
-        <span className="select-none whitespace-nowrap font-display text-[21vw] font-black leading-none tracking-tight text-white/[0.05]">
-          WaterLine
-        </span>
+        <Reveal as="span" y={40}>
+          <span className="select-none whitespace-nowrap font-display text-[21vw] font-black leading-none tracking-tight text-white/[0.05]">
+            WaterLine
+          </span>
+        </Reveal>
       </div>
     </footer>
   );
