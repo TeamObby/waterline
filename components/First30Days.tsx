@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   ChevronIcon,
   ShieldIcon,
@@ -10,6 +11,8 @@ import {
   CheckIcon,
 } from "./Icons";
 import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
+
+const EASE: [number, number, number, number] = [0.21, 0.47, 0.32, 0.98];
 
 const timeline = [
   {
@@ -40,6 +43,7 @@ const timeline = [
 
 export function First30Days() {
   const [open, setOpen] = useState(0);
+  const reduce = useReducedMotion();
 
   return (
     <section className="bg-paper-warm py-20 md:py-28">
@@ -142,9 +146,17 @@ export function First30Days() {
               }}
             />
             <div className="relative flex flex-col gap-6">
-              <div key={open} className="wl-fade">
-                <StepVisual index={open} />
-              </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={open}
+                  initial={reduce ? false : { opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={reduce ? { opacity: 0 } : { opacity: 0, y: -10 }}
+                  transition={{ duration: reduce ? 0 : 0.28, ease: EASE }}
+                >
+                  <StepVisual index={open} />
+                </motion.div>
+              </AnimatePresence>
 
               {/* Progress dots */}
               <div className="flex items-center gap-2">
