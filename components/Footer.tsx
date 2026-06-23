@@ -22,16 +22,28 @@ const columns = [
     title: "Get started",
     links: [
       { label: "Get my Leak Check", href: "#cta" },
-      { label: "hello@waterline.example", href: "mailto:hello@waterline.example" },
+      { label: "Team@waterlinevoice.com", href: "mailto:Team@waterlinevoice.com" },
     ],
   },
 ];
 
 const socials = [
-  { label: "X (Twitter)", href: "#", Icon: XLogo },
-  { label: "Facebook", href: "#", Icon: FacebookLogo },
-  { label: "Instagram", href: "#", Icon: InstagramLogo },
-  { label: "LinkedIn", href: "#", Icon: LinkedinLogo },
+  { label: "X (Twitter)", href: "https://x.com/WaterlineGrowth", Icon: XLogo },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61586177527312",
+    Icon: FacebookLogo,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/waterlinevoice/",
+    Icon: InstagramLogo,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/waterline-voice/",
+    Icon: LinkedinLogo,
+  },
 ];
 
 export function Footer() {
