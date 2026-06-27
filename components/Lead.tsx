@@ -35,7 +35,7 @@ export function Lead() {
             <p className="mt-6 max-w-prose text-lg text-ink-muted">
               Tell us where to reach you. We&rsquo;ll text you within a business
               hour to run the Leak Check on last week&rsquo;s calls, set up your
-              rule sheet, and put WaterLine behind your existing line.
+              rule sheet, and put Waterline behind your existing line.
             </p>
 
             <Stagger as="ul" className="mt-8 space-y-3">
@@ -261,7 +261,7 @@ function SuccessPanel({ name }: { name: string }) {
       <div className="mt-6 rounded-2xl border border-leaf-500/25 bg-leaf-500/[0.06] p-4 text-sm text-ink">
         <p className="font-semibold text-leaf-600">What happens next</p>
         <ol className="mt-2 space-y-1.5 text-ink-muted">
-          <li>1. We text you to confirm the right number to put WaterLine behind.</li>
+          <li>1. We text you to confirm the right number to put Waterline behind.</li>
           <li>2. 30-minute setup call to build your rule sheet.</li>
           <li>3. Your line goes live the same day. First text usually lands within hours.</li>
         </ol>

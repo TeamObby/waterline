@@ -47,10 +47,10 @@ export function FAQ() {
             <p className="mt-5 max-w-prose text-ink-muted">
               Still chewing on something? Email{" "}
               <a
-                href="mailto:hello@waterline.example"
+                href="mailto:Team@waterlinevoice.com"
                 className="font-medium text-water-700 underline-offset-4 hover:underline"
               >
-                hello@waterline.example
+                Team@waterlinevoice.com
               </a>
               . We answer ourselves.
             </p>

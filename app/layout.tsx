@@ -18,14 +18,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "WaterLine — Stop losing plumbing jobs to voicemail",
+  title: "Waterline Voice — Stop losing plumbing jobs to voicemail",
   description:
-    "WaterLine sits behind your existing number and only answers calls that would've gone to voicemail. Same number. Texts you the job in about a minute.",
-  metadataBase: new URL("https://waterline.example.com"),
+    "Waterline sits behind your existing number and only answers calls that would've gone to voicemail. Same number. Texts you the job in about a minute.",
+  metadataBase: new URL("https://waterlinevoice.com"),
   openGraph: {
-    title: "WaterLine — Stop losing plumbing jobs to voicemail",
+    title: "Waterline Voice — Stop losing plumbing jobs to voicemail",
     description:
-      "Your phone rings first. If it would hit voicemail, WaterLine answers, takes the details, and texts you the job.",
+      "Your phone rings first. If it would hit voicemail, Waterline answers, takes the details, and texts you the job.",
     type: "website",
     images: [
       {
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WaterLine — Stop losing plumbing jobs to voicemail",
+    title: "Waterline Voice — Stop losing plumbing jobs to voicemail",
     description:
-      "Your phone rings first. If it would hit voicemail, WaterLine answers, takes the details, and texts you the job.",
+      "Your phone rings first. If it would hit voicemail, Waterline answers, takes the details, and texts you the job.",
     images: ["/images/brand/og-image.png"],
   },
 };

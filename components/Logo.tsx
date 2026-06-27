@@ -12,7 +12,7 @@ export function Logo({
     <span className={`inline-flex items-center ${className}`}>
       <Image
         src="/waterline-logo-white.png"
-        alt="WaterLine logo"
+        alt="Waterline Voice logo"
         width={1691}
         height={930}
         priority={size === "md"}

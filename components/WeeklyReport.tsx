@@ -3,7 +3,7 @@ import { Reveal, Stagger, StaggerItem } from "./motion/Reveal";
 const reportLines = [
   { label: "Total calls in", value: "47" },
   { label: "Calls you answered yourself", value: "31" },
-  { label: "Calls WaterLine rescued", value: "9" },
+  { label: "Calls Waterline rescued", value: "9" },
   { label: "Junk filtered out", value: "7" },
   { label: "Rough dollars captured", value: "~$2,400" },
 ];
@@ -32,7 +32,7 @@ export function WeeklyReport() {
               <Bullet>Total calls in</Bullet>
               <Bullet>Calls you answered yourself</Bullet>
               <Bullet>
-                Calls WaterLine rescued (names, addresses, rough job types)
+                Calls Waterline rescued (names, addresses, rough job types)
               </Bullet>
               <Bullet>Junk filtered out</Bullet>
               <Bullet>Rough dollars captured based on your job mix</Bullet>
@@ -40,7 +40,7 @@ export function WeeklyReport() {
             <p className="mt-7 max-w-prose text-ink-muted">
               You&rsquo;re already paying to make the phone ring.{" "}
               <span className="font-semibold text-ink">
-                WaterLine shows you how many of those calls were saved from
+                Waterline shows you how many of those calls were saved from
                 voicemail.
               </span>
             </p>
@@ -56,7 +56,7 @@ export function WeeklyReport() {
                   <span className="h-2 w-2 rounded-full bg-paper-edge" />
                   <span className="h-2 w-2 rounded-full bg-paper-edge" />
                 </span>
-                <span className="font-mono">Mon 7:00 AM &middot; from WaterLine</span>
+                <span className="font-mono">Mon 7:00 AM &middot; from Waterline</span>
               </div>
               <div className="p-6 md:p-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-water-700">

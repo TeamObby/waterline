@@ -24,7 +24,7 @@ const C = {
 const slots = [
   // ── Brand / global ─────────────────────────────────────────────
   { path: "brand/og-image", w: 1200, h: 630, title: "OG / Social Share", subject: "Headline + logo over dimmed under-sink photo", ratio: "1.91:1", accent: C.rust },
-  { path: "brand/favicon", w: 512, h: 512, title: "Favicon", subject: "WaterLine drop/wrench mark", ratio: "1:1", accent: C.water },
+  { path: "brand/favicon", w: 512, h: 512, title: "Favicon", subject: "Waterline drop/wrench mark", ratio: "1:1", accent: C.water },
   { path: "brand/apple-touch-icon", w: 180, h: 180, title: "Apple Touch Icon", subject: "Mark, safe padding", ratio: "1:1", accent: C.water },
 
   // ── Hero ───────────────────────────────────────────────────────

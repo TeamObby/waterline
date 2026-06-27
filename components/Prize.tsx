@@ -10,7 +10,7 @@ const wins = [
   {
     label: "Freedom",
     Icon: ClockIcon,
-    body: "The phone stops owning dinner, Sundays, and 9 pm. You answer when you can; WaterLine quietly covers the rest.",
+    body: "The phone stops owning dinner, Sundays, and 9 pm. You answer when you can; Waterline quietly covers the rest.",
   },
 ];
 

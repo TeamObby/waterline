@@ -37,7 +37,7 @@ export function BuiltForPlumbers() {
           <p className="mt-6 text-lg leading-relaxed text-paper/75">
             Most AI receptionists are built for &ldquo;any business&rdquo;:
             dentists, salons, law firms. That means they&rsquo;re perfect for no
-            one. WaterLine is tuned around one call: a homeowner with a plumbing
+            one. Waterline is tuned around one call: a homeowner with a plumbing
             problem, calling a plumber who&rsquo;s already on a job.
           </p>
         </Reveal>

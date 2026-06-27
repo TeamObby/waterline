@@ -1,4 +1,4 @@
-# WaterLine — image assets
+# Waterline — image assets
 
 Placeholder `.svg` files render each slot's name, subject, aspect ratio, and
 target size so the layout reads correctly before real art lands. Regenerate
@@ -27,7 +27,7 @@ Palette — `ink #0B1320 · paper #FBFAF6 · water #0F5E9A · rust #E0822A · le
 | File | Section | Subject | Ratio | Target px |
 |------|---------|---------|-------|-----------|
 | `brand/og-image` | `<head>` OpenGraph | Headline + logo over dimmed under-sink photo | 1.91:1 | 1200 × 630 |
-| `brand/favicon` | `<head>` | WaterLine drop/wrench mark | 1:1 | 512 × 512 |
+| `brand/favicon` | `<head>` | Waterline drop/wrench mark | 1:1 | 512 × 512 |
 | `brand/apple-touch-icon` | `<head>` | Mark, safe padding | 1:1 | 180 × 180 |
 | `hero/hero-under-sink` | Hero | Plumber under sink, phone lighting up | 4:5 | 1080 × 1350 |
 | `problem/situation-1-under-sink` | Problem grid | Under a sink, wet-handed | 1:1 | 800 × 800 |

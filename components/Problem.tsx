@@ -114,7 +114,7 @@ export function Problem() {
                 distance={5}
                 duration={5.5}
                 delay={0.4}
-                className="absolute -bottom-4 -right-1 w-44 rounded-2xl border border-water-500/20 bg-water-50 p-4 shadow-card sm:-right-6 sm:w-48"
+                className="absolute bottom-2 -right-1 w-44 rounded-2xl border border-water-500/20 bg-water-50 p-4 shadow-card sm:-right-6 sm:w-48"
               >
                 <p className="text-xs font-medium text-ink-muted">
                   Every missed call could be
@@ -141,7 +141,7 @@ export function Problem() {
               <p className="mt-4 max-w-prose text-paper/70">
                 One missed emergency call is worth about $1,800. Repipes are
                 around $4,500. It only takes a couple a month to dwarf what
-                WaterLine costs.
+                Waterline costs.
               </p>
             </div>
 
@@ -157,14 +157,14 @@ export function Problem() {
           <div className="grid gap-6 md:grid-cols-2 md:items-center">
             <p className="font-display text-2xl leading-snug text-paper md:text-3xl">
               One <span className="text-rust-400">$1,800 water heater</span>{" "}
-              covers WaterLine for 4+ months.
+              covers Waterline for 4+ months.
             </p>
             <p className="text-paper/70">
               The money doesn&rsquo;t disappear because you&rsquo;re bad at
               business. It disappears because nobody picked up during those
               ten seconds.{" "}
               <span className="font-semibold text-paper">
-                That&rsquo;s the missed-call leak. WaterLine plugs it.
+                That&rsquo;s the missed-call leak. Waterline plugs it.
               </span>
             </p>
           </div>

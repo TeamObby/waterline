@@ -51,13 +51,13 @@ export function Header() {
         {/* Logo + wordmark (desktop only) */}
         <Link
           href="/"
-          aria-label="WaterLine home"
+          aria-label="Waterline Voice home"
           className="hidden items-center md:flex"
           onClick={() => setOpen(false)}
         >
           <Logo size="lg" />
           <span className="-ml-1.5 font-brand text-2xl font-bold tracking-tight text-paper/80">
-            WaterLine
+            Waterline Voice
           </span>
         </Link>
 

@@ -146,7 +146,7 @@ export function Calculator() {
                 <ShieldIcon className="mt-0.5 h-5 w-5 text-leaf-500" />
                 <div className="text-sm leading-relaxed text-paper">
                   <p>
-                    WaterLine is{" "}
+                    Waterline is{" "}
                     <span className="font-semibold text-paper">$399</span>{" "}
                     every 4 weeks.
                   </p>
@@ -161,12 +161,12 @@ export function Calculator() {
                       </>
                     ) : coversBy >= 0.9 ? (
                       <>
-                        At these numbers, WaterLine roughly pays for itself
+                        At these numbers, Waterline roughly pays for itself
                         every month &mdash; before any upside.
                       </>
                     ) : (
                       <>
-                        At these numbers, WaterLine doesn&rsquo;t obviously
+                        At these numbers, Waterline doesn&rsquo;t obviously
                         pay for itself. Only sign up if you know there&rsquo;s
                         a leak.
                       </>

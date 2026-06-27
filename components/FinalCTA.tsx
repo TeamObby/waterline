@@ -21,7 +21,7 @@ export function FinalCTA() {
           <Reveal as="h2" y={24} className="mt-6 font-display text-4xl font-black leading-[1.05] text-paper md:text-6xl">
             You&rsquo;re already paying to make the phone ring.
             <span className="block text-water-200">
-              WaterLine just picks up when you can&rsquo;t.
+              Waterline just picks up when you can&rsquo;t.
             </span>
           </Reveal>
           <p className="mt-6 text-lg text-paper/75">

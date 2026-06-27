@@ -8,7 +8,7 @@ const demoSteps = [
   },
   {
     Icon: ChatIcon,
-    text: "Hear WaterLine answer in your company’s name",
+    text: "Hear Waterline answer in your company’s name",
   },
   {
     Icon: PhoneIcon,
@@ -41,7 +41,7 @@ export function FastStart() {
               Before you decide, we&rsquo;ll do a free 10-minute Missed-Call Leak
               Check on last week&rsquo;s calls so you can see how much work is
               already slipping to the next plumber on Google. On that same call,
-              we&rsquo;ll set WaterLine up on your number so you can try it live.
+              we&rsquo;ll set Waterline up on your number so you can try it live.
             </p>
             <a href="#cta" className="btn-primary mt-8">
               Get My 10-Minute Leak Check

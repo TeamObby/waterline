@@ -18,7 +18,7 @@ const timeline = [
   {
     when: "Day 0",
     title: "Setup (about an hour)",
-    body: "One short call to build your rule sheet: service area, zip codes, hours, after-hours rules, jobs you want, jobs you don't, what counts as an emergency, how we should talk, what not to say. We put WaterLine behind your existing number. You test it with a few calls.",
+    body: "One short call to build your rule sheet: service area, zip codes, hours, after-hours rules, jobs you want, jobs you don't, what counts as an emergency, how we should talk, what not to say. We put Waterline behind your existing number. You test it with a few calls.",
     Icon: PhoneIcon,
   },
   {
@@ -36,7 +36,7 @@ const timeline = [
   {
     when: "Day 30",
     title: "Guarantee check",
-    body: "We open the rescued-call list together. If there isn't at least one real job you would've missed without WaterLine, your first 4 weeks are refunded.",
+    body: "We open the rescued-call list together. If there isn't at least one real job you would've missed without Waterline, your first 4 weeks are refunded.",
     Icon: ShieldIcon,
   },
 ];
@@ -281,7 +281,7 @@ function StepVisual({ index }: { index: number }) {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-leaf-500/60" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-leaf-500" />
             </span>
-            <p className="text-sm font-semibold text-paper">WaterLine is live</p>
+            <p className="text-sm font-semibold text-paper">Waterline is live</p>
             <span className="ml-auto text-[11px] text-paper/50">no app to babysit</span>
           </div>
           <ul className="mt-3 space-y-2">

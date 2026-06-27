@@ -19,7 +19,7 @@ const items = [
 
 export function Marquee() {
   return (
-    <section aria-label="What you get with WaterLine" className="py-8 md:py-12">
+    <section aria-label="What you get with Waterline" className="py-8 md:py-12">
       <div className="container-page">
         <Reveal>
         <div

@@ -6,7 +6,7 @@ const counts = [
   "Calling your main number",
   "You or your office didn't answer",
   "The call would've gone to voicemail",
-  "WaterLine answered instead",
+  "Waterline answered instead",
   "We collected useful job details",
 ];
 

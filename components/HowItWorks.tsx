@@ -22,11 +22,11 @@ const steps = [
   },
   {
     title: "If you answer, we’re out.",
-    body: "You pick up, WaterLine never touches it, never logs it, never bills it.",
+    body: "You pick up, Waterline never touches it, never logs it, never bills it.",
     Icon: CheckIcon,
   },
   {
-    title: "If it would go to voicemail, WaterLine answers.",
+    title: "If it would go to voicemail, Waterline answers.",
     body: "Only then. No stealing live calls. No forwarding every call to a robot.",
     Icon: VoicemailIcon,
   },
@@ -52,7 +52,7 @@ const steps = [
   },
   {
     title: "Monday 7am, you get your Weekly Results Report.",
-    body: "Calls in, calls you answered, calls WaterLine rescued, junk filtered, rough dollars captured.",
+    body: "Calls in, calls you answered, calls Waterline rescued, junk filtered, rough dollars captured.",
     Icon: DollarIcon,
   },
 ];
@@ -62,7 +62,7 @@ export function HowItWorks() {
     <section id="how" className="bg-paper-warm py-20 md:py-28">
       <div className="container-page">
         <Reveal className="max-w-3xl">
-          <span className="eyebrow">How WaterLine works</span>
+          <span className="eyebrow">How Waterline works</span>
           <h2 className="mt-5 text-4xl font-black leading-[1.1] md:text-5xl">
             Miss the call. Keep the customer.
           </h2>

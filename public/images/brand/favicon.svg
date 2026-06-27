@@ -5,7 +5,7 @@
   <rect x="15" y="15" width="72" height="10" fill="#0F5E9A"/>
   
     <text x="256" y="225.28" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="800" font-size="36" fill="#0B1320">Favicon</text>
-    <text x="256" y="261.12" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="500" font-size="23" fill="#3A4658">WaterLine drop/wrench mark</text>
+    <text x="256" y="261.12" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="500" font-size="23" fill="#3A4658">Waterline drop/wrench mark</text>
     <text x="256" y="296.96" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="700" font-size="20" fill="#0F5E9A">1:1 · 512×512px</text>
     <text x="256" y="480" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-weight="600" font-size="17" fill="#3A4658" opacity="0.75">PLACEHOLDER · replace with favicon.webp</text>
 </svg>

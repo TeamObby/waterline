@@ -28,7 +28,7 @@ const columns = [
 ];
 
 const socials = [
-  { label: "X (Twitter)", href: "https://x.com/WaterlineGrowth", Icon: XLogo },
+  { label: "X (Twitter)", href: "https://x.com/waterlinevoice", Icon: XLogo },
   {
     label: "Facebook",
     href: "https://www.facebook.com/profile.php?id=61586177527312",
@@ -71,7 +71,7 @@ export function Footer() {
               <div>
                 <Logo size="lg" />
                 <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper/60">
-                  WaterLine sits behind your existing number and only answers
+                  Waterline sits behind your existing number and only answers
                   what would&rsquo;ve gone to voicemail &mdash; so good jobs
                   stop slipping to the next plumber on Google.
                 </p>
@@ -116,7 +116,7 @@ export function Footer() {
             <div className="my-8 h-px w-full bg-white/10" />
 
             <div className="flex flex-col gap-3 text-xs text-paper/45 md:flex-row md:items-center md:justify-between">
-              <p>&copy; {year} WaterLine. Built for US residential plumbers.</p>
+              <p>&copy; {year} Waterline Voice. Built for US residential plumbers.</p>
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
                 <a
                   href="#"
@@ -143,7 +143,7 @@ export function Footer() {
       >
         <Reveal as="span" y={40}>
           <span className="select-none whitespace-nowrap font-display text-[21vw] font-black leading-none tracking-tight text-white/[0.05]">
-            WaterLine
+            Waterline Voice
           </span>
         </Reveal>
       </div>

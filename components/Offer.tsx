@@ -34,7 +34,7 @@ export function Offer() {
           <article className="relative overflow-hidden rounded-3xl border border-ink/10 bg-white p-6 shadow-lift sm:p-8 md:p-10">
             <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-water-100/60 blur-2xl" />
             <p className="relative text-sm font-semibold uppercase tracking-[0.18em] text-water-700">
-              WaterLine for plumbers
+              Waterline for plumbers
             </p>
             <div className="relative mt-4 flex items-baseline gap-2">
               <span className="font-display text-6xl font-semibold text-ink md:text-7xl">

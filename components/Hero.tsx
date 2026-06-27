@@ -47,7 +47,7 @@ export function Hero() {
             className="mt-6 max-w-prose text-lg leading-relaxed text-ink-muted"
           >
             We run a 24/7 Missed-Call Rescue System for plumbers.{" "}
-            <span className="font-semibold text-ink">You answer first. We rescue the rest.</span>{" "}
+            <span className="font-semibold text-ink">You answer when you can. We rescue the rest.</span>{" "}
             Turn missed calls into rescued plumbing jobs without hiring anyone,
             changing your number, or letting AI touch a call you would have
             answered yourself.
@@ -137,7 +137,7 @@ function HeroVisual({ reduce }: { reduce: boolean }) {
         {/* Arrow */}
         <div className="my-3 flex items-center justify-center gap-2 text-xs font-medium uppercase tracking-wider text-ink-muted">
           <span className="h-px w-10 bg-ink/20" />
-          WaterLine answers
+          Waterline answers
           <span className="h-px w-10 bg-ink/20" />
         </div>
 
@@ -174,7 +174,7 @@ function HeroVisual({ reduce }: { reduce: boolean }) {
             <WrenchIcon className="h-3.5 w-3.5 text-water-500" />
             One $1,800 water heater
           </p>
-          <p className="text-ink-muted">covers WaterLine for 4+ months</p>
+          <p className="text-ink-muted">covers Waterline for 4+ months</p>
         </FloatLoop>
       </motion.div>
     </div>

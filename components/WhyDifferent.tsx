@@ -68,7 +68,7 @@ export function WhyDifferent() {
                   </p>
                 </div>
 
-                {/* WaterLine */}
+                {/* Waterline Voice */}
                 <div className="relative bg-gradient-to-br from-leaf-500/[0.10] via-leaf-500/[0.04] to-paper p-6">
                   <span className="absolute right-4 top-4 rounded-full bg-leaf-500/12 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-leaf-600">
                     Better
@@ -78,7 +78,7 @@ export function WhyDifferent() {
                       <CheckIcon className="h-3.5 w-3.5" />
                     </span>
                     <p className="text-xs font-semibold uppercase tracking-wider text-leaf-600">
-                      WaterLine
+                      Waterline Voice
                     </p>
                   </div>
                   <p className="mt-3 text-sm font-medium leading-relaxed text-ink">
